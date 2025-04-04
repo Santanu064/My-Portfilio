@@ -18,8 +18,8 @@
     <div class="right w-50 d-flex align-items-center">
       <div class="self-content animate-on-scroll lh-1">
         <p class="preahvihear-regular tx1">A Developer who</p>
-        <h1 class="preahvihear-regular mb-0">Building the digital</h1>
-        <h1 class="preahvihear-regular">
+        <h1 class="preahvihear-regular mb-0 res-intro">Building the digital</h1>
+        <h1 class="preahvihear-regular res-intro">
           tomorrow, <span class="self-span">Today</span> ...
         </h1>
       </div>
@@ -33,11 +33,11 @@
         <li><span>Web developer</span></li>
       </ul>
     </div>
-    <p class="w-50 current-phase">
+    <p class="w-75 current-phase">
       Currently I'm a student
       <span class="self-span">@ Michael Madhusudan Memorial Collage </span>
     </p>
-    <p class="w-75 mt-5">
+    <p class="w-75 mt-5 res-ons">
       I am a software developer with a passion for creating innovative
       solutions. I have experience in developing web applications using modern
       technologies. I am always eager to learn new technologies and improve my
@@ -47,11 +47,11 @@
 </section>
 <section class="Skill preahvihear-regular">
   <div class="s-wrap d-flex align-items-center">
-    <h4>
+    <h4 class="res-sl">
       I'm currently looking to join a
       <span class="self-span">cross-functional</span> team
     </h4>
-    <h6>that values improving people's lives through accessible design</h6>
+    <h6 class="res-sl1">that values improving people's lives through accessible design</h6>
   </div>
   <div class="skill-wrap d-flex justify-content-center">
     <div class="l-skill">
@@ -65,7 +65,7 @@
       <div class="skl">
         {% for s_skill in skills2 %}
         <div class="skl-2">
-          <img src="{{s_skill.image.url}}" alt="" />
+          <img src="{{s_skill.image.url}}" class="sl-img" alt="" />
         </div>
         {% endfor %}
       </div>
@@ -171,7 +171,7 @@
           <div class="tech">
             {% for skill in project.technologies.all %}
             <div class="p-s-wrap">
-              <img src="{{skill.image.url}}" alt="" />
+              <img class="res-a-img" src="{{skill.image.url}}" alt="" />
             </div>
             {% endfor %}
           </div>
@@ -200,7 +200,7 @@
     <div class="project3 bacis">
       <div class="gradient-circle pro_right1 z-1">
         <div class="bdr-stl1">
-          <img class="pro-img" src="{{project.project_image.url}}"
+          <img class="pro-img p3-s" src="{{project.project_image.url}}"
           alt="">
         </div>
       </div>
@@ -211,7 +211,7 @@
           <div class="tech1">
             {% for skill in project.technologies.all %}
               <div class="p-s-wrap">
-                <img src="{{skill.image.url}}" alt="" />
+                <img class="p3-img" src="{{skill.image.url}}" alt="" />
               </div>
             {% endfor %}
           </div>
