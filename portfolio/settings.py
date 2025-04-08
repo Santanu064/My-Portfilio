@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#%(gvi6$i6j43$x2vx#))0_07t85ittj9$=k9ht_$g9i_2kpq8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,10 +76,27 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+       'ENGINE': 'django.db.backends.mysql',
+       'NAME': 'railway',
+       'USER': 'root',
+       'PASSWORD': 'vLGVxVuInRkZEOEzbuzzNXreSFsQWVxk',
+       'HOST': 'shinkansen.proxy.rlwy.net',
+       'PORT': '50532',
     }
+    # mysql://root:vLGVxVuInRkZEOEzbuzzNXreSFsQWVxk@shinkansen.proxy.rlwy.net:50532/railway
 }
+
+# DATABASES = {
+#    ' default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'railway',
+#        'USER': 'root',
+#        'PASSWORD': 'RPzGMRfvVIcfSfkOLmbOYUfJwbGWXpSG',
+#        'HOST': 'mysql.railway.internal',
+#        'PORT': '3306',
+# }
+
+#}
 
 
 # Password validation
@@ -118,8 +135,8 @@ USE_TZ = True
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = 'static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS=[ os.path.join(BASE_DIR,'static') ]
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build' ,'static')
 
 
 # Default primary key field type
